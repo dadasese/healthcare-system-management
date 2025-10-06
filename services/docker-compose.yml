@@ -40,10 +40,8 @@ services:
       - "9001:9001"
     networks:
       - internal
-
 volumes:
   patient-db-data:
 networks:
   internal:
     driver: bridge
-
