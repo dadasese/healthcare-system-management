@@ -1,0 +1,14 @@
+### POST request to patient endpoint
+POST http://localhost:4000/api/v1/patients
+Content-Type: application/json
+
+{
+  "name": "John",
+  "lastName": "Doe",
+  "phoneNumber": "555-1234",
+  "address": "CL 20 23 # 23",
+  "email": "emails@email.com",
+  "birthDate": "2000-01-01"
+}
+
+###
