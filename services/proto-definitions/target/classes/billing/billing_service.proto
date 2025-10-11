@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.hsm.billing";
+
+service BillingService {
+  rpc CreateBillingAccount (BillingRequest) returns (BillingResponse);
+  rpc UpdateBillingAccount (BillingUpdateRequest) returns (BillingUpdateResponse);
+  rpc DeleteBillingAccount (BillingDeleteRequest) returns (BillingDeleteResponse);
+}
+
+message BillingRequest {
+  int64 patientId = 1;
+  string name = 2;
+  string email = 3;
+}
+
+message BillingResponse {
+  int64 accountId = 1;
+  string status = 2;
+}
+
+message BillingUpdateRequest {
+  int64 patientId = 1;
+  string name = 2;
+  string email = 3;
+}
+
+message BillingUpdateResponse {
+  int64 accountId = 1;
+  string name = 2;
+  string email = 3;
+  string status = 4;
+}
+
+message BillingDeleteRequest {
+  int64 patientId = 1;
+}
+
+message BillingDeleteResponse {
+  string message = 1;
+}

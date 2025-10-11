@@ -1,0 +1,7 @@
+GRPC localhost:9001/BillingService/UpdateBillingAccount
+
+{
+  "patientId": 1,
+  "name":"Linsay Monroe",
+  "email": "linsay.monroe@email.com"
+}

@@ -4,6 +4,7 @@ import com.hsm.patientservice.dto.PatientRequestDTO;
 import com.hsm.patientservice.dto.PatientResponseDTO;
 import com.hsm.patientservice.exception.EmailException;
 import com.hsm.patientservice.exception.ModelNotFoundException;
+import com.hsm.patientservice.grpc.BillingServiceGrpcClient;
 import com.hsm.patientservice.mapper.PatientMapper;
 import com.hsm.patientservice.model.Patient;
 import com.hsm.patientservice.repository.PatientRepository;
@@ -23,10 +24,12 @@ public class PatientService {
     private static final Logger log = LoggerFactory.getLogger(PatientService.class);
     private final PatientRepository patientRepository;
     private final PatientMapper patientMapper;
+    private final BillingServiceGrpcClient billingServiceGrpcClient;
 
-    public PatientService(PatientRepository patientRepository, PatientMapper patientMapper){
+    public PatientService(PatientRepository patientRepository, PatientMapper patientMapper, BillingServiceGrpcClient billingServiceGrpcClient){
         this.patientRepository = patientRepository;
         this.patientMapper = patientMapper;
+        this.billingServiceGrpcClient = billingServiceGrpcClient;
     }
 
     @Transactional(readOnly = true)
@@ -49,6 +52,10 @@ public class PatientService {
         Patient patientEntity = patientMapper.toEntityPatient(patientRequestDTO);
         Patient savedPatient = patientRepository.save(patientEntity);
 
+        billingServiceGrpcClient.createBillingAccount(savedPatient.getId(),
+                savedPatient.getName(),
+                savedPatient.getEmail());
+
         PatientResponseDTO response = patientMapper.toPatientDTO(savedPatient);
 
         log.info("Successfully created patient with ID: {}", response.getId());
@@ -70,6 +77,8 @@ public class PatientService {
 
         Patient savedPatient = patientRepository.save(existingPatient);
 
+        billingServiceGrpcClient.updateBillingAccount(id, savedPatient.getName(), savedPatient.getEmail());
+
         log.info("Successfully updated patient with ID: {}", id);
         return patientMapper.toPatientDTO(savedPatient);
     }
@@ -80,6 +89,9 @@ public class PatientService {
         validatePatientId(id);
 
         patientRepository.deleteById(id);
+
+        billingServiceGrpcClient.deleteBillingAccount(id);
+
         log.info("Successfully deleted patient with ID: {}", id);
     }
 

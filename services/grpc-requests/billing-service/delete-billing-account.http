@@ -1,0 +1,5 @@
+GRPC localhost:9001/BillingService/DeleteBillingAccount
+
+{
+  "patientId": 1
+}

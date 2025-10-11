@@ -1,0 +1,14 @@
+/home/shibuyalamafia/Documents/java/projects/healthcare-system-management/services/proto-definitions/target/generated-sources/protobuf/grpc-java/com/hsm/billing/BillingServiceGrpc.java
+/home/shibuyalamafia/Documents/java/projects/healthcare-system-management/services/proto-definitions/target/generated-sources/protobuf/java/com/hsm/billing/BillingDeleteRequest.java
+/home/shibuyalamafia/Documents/java/projects/healthcare-system-management/services/proto-definitions/target/generated-sources/protobuf/java/com/hsm/billing/BillingDeleteRequestOrBuilder.java
+/home/shibuyalamafia/Documents/java/projects/healthcare-system-management/services/proto-definitions/target/generated-sources/protobuf/java/com/hsm/billing/BillingDeleteResponse.java
+/home/shibuyalamafia/Documents/java/projects/healthcare-system-management/services/proto-definitions/target/generated-sources/protobuf/java/com/hsm/billing/BillingDeleteResponseOrBuilder.java
+/home/shibuyalamafia/Documents/java/projects/healthcare-system-management/services/proto-definitions/target/generated-sources/protobuf/java/com/hsm/billing/BillingRequest.java
+/home/shibuyalamafia/Documents/java/projects/healthcare-system-management/services/proto-definitions/target/generated-sources/protobuf/java/com/hsm/billing/BillingRequestOrBuilder.java
+/home/shibuyalamafia/Documents/java/projects/healthcare-system-management/services/proto-definitions/target/generated-sources/protobuf/java/com/hsm/billing/BillingResponse.java
+/home/shibuyalamafia/Documents/java/projects/healthcare-system-management/services/proto-definitions/target/generated-sources/protobuf/java/com/hsm/billing/BillingResponseOrBuilder.java
+/home/shibuyalamafia/Documents/java/projects/healthcare-system-management/services/proto-definitions/target/generated-sources/protobuf/java/com/hsm/billing/BillingServiceOuterClass.java
+/home/shibuyalamafia/Documents/java/projects/healthcare-system-management/services/proto-definitions/target/generated-sources/protobuf/java/com/hsm/billing/BillingUpdateRequest.java
+/home/shibuyalamafia/Documents/java/projects/healthcare-system-management/services/proto-definitions/target/generated-sources/protobuf/java/com/hsm/billing/BillingUpdateRequestOrBuilder.java
+/home/shibuyalamafia/Documents/java/projects/healthcare-system-management/services/proto-definitions/target/generated-sources/protobuf/java/com/hsm/billing/BillingUpdateResponse.java
+/home/shibuyalamafia/Documents/java/projects/healthcare-system-management/services/proto-definitions/target/generated-sources/protobuf/java/com/hsm/billing/BillingUpdateResponseOrBuilder.java
