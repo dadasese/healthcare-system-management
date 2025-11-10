@@ -1,15 +1,15 @@
 package com.hsm.billingservice.grpc;
 
-import com.hsm.billing.*;
 import com.hsm.billingservice.exception.EmailException;
 import com.hsm.billingservice.model.Billing;
 import com.hsm.billingservice.service.BillingService;
+import com.hsm.protodefinitions.billing.*;
+import com.hsm.protodefinitions.billing.BillingServiceGrpc.BillingServiceImplBase;
 import io.grpc.Status;
 import io.grpc.stub.StreamObserver;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import net.devh.boot.grpc.server.service.GrpcService;
-import com.hsm.billing.BillingServiceGrpc.BillingServiceImplBase;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.dao.DataIntegrityViolationException;
@@ -17,7 +17,7 @@ import org.springframework.dao.DataIntegrityViolationException;
 @GrpcService
 @RequiredArgsConstructor
 @Slf4j
-public class BillingGrpcService extends BillingServiceImplBase{
+public class BillingGrpcService extends BillingServiceImplBase {
 
     private final BillingService billingService;
 
@@ -158,7 +158,7 @@ public class BillingGrpcService extends BillingServiceImplBase{
 
     @Override
     public void deleteBillingAccount(BillingDeleteRequest billingDeleteRequest,
-                                                      StreamObserver<BillingDeleteResponse> responseObserver){
+                                     StreamObserver<BillingDeleteResponse> responseObserver){
         try{
             log.info("Deleting billing account with patientId {}", billingDeleteRequest.getPatientId());
 

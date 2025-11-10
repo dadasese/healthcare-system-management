@@ -15,6 +15,29 @@ services:
       - "5000:5432"
     networks:
       - internal
+  kafka:
+    image: apache/kafka:latest
+    container_name: kafka
+    ports:
+      - "9092:9092"
+      - "9094:9094"
+    environment:
+      KAFKA_NODE_ID: ${KAFKA_CFG_NODE_ID}
+      KAFKA_PROCESS_ROLES: ${KAFKA_CFG_PROCESS_ROLES}
+      KAFKA_LISTENERS: ${KAFKA_CFG_LISTENERS}
+      KAFKA_ADVERTISED_LISTENERS: ${KAFKA_CFG_ADVERTISED_LISTENERS}
+      KAFKA_CONTROLLER_LISTENER_NAMES: ${KAFKA_CFG_CONTROLLER_LISTENER_NAMES}
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: ${KAFKA_CFG_LISTENER_SECURITY_PROTOCOL_MAP}
+      KAFKA_CONTROLLER_QUORUM_VOTERS: ${KAFKA_CFG_CONTROLLER_QUORUM_VOTERS}
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
+      KAFKA_LOG_DIRS: /var/lib/kafka/data
+    volumes:
+      - kafka-data:/var/lib/kafka/data
+    networks:
+      - internal
   patient-service:
     image: patient-service:latest
     container_name: patient-service
@@ -29,6 +52,7 @@ services:
       SPRING_SQL_INIT_MODE: ${SPRING_SQL_INIT_MODE}
       BILLING_SERVICE_ADDRESS: ${BILLING_SERVICE_ADDRESS}
       BILLING_SERVICE_GRPC_PORT: ${BILLING_SERVICE_PORT}
+      SPRING_KAFKA_BOOTSTRAP_SERVERS: ${SPRING_KAFKA_BOOTSTRAP_SERVERS}
     depends_on:
       - patient-service-db
     networks:
@@ -48,10 +72,33 @@ services:
       SPRING_SQL_INIT_MODE: ${SPRING_SQL_INIT_MODE}
     depends_on:
       - patient-service-db
+      - kafka
     networks:
       - internal
+  analytics-service:
+    image: analytics-service:latest
+    container_name: analytics-service
+    build: analytics-service
+    ports:
+      - "4002:4002"
+    environment:
+      SPRING_DATASOURCE_PASSWORD: ${SPRING_DATASOURCE_PASSWORD}
+      SPRING_DATASOURCE_USERNAME: ${SPRING_DATASOURCE_USERNAME}
+      SPRING_DATASOURCE_URL: ${SPRING_DATASOURCE_URL}
+      SPRING_JPA_HIBERNATE_DDL_AUTO: ${SPRING_JPA_HIBERNATE_DDL_AUTO}
+      SPRING_SQL_INIT_MODE: ${SPRING_SQL_INIT_MODE}
+      SPRING_KAFKA_BOOTSTRAP_SERVERS: ${SPRING_KAFKA_BOOTSTRAP_SERVERS}
+    depends_on:
+      patient-service-db:
+        condition: service_started
+      kafka:
+        condition: service_started
+    networks:
+      - internal
+    restart: unless-stopped
 volumes:
   patient-db-data:
+  kafka-data:
 networks:
   internal:
     driver: bridge

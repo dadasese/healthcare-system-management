@@ -7,7 +7,7 @@ Content-Type: application/json
   "lastName": "Doe",
   "phoneNumber": "555-1234",
   "address": "CL 20 23 # 23",
-  "email": "emails@email.com",
+  "email": "pepeson@email.com",
   "birthDate": "2000-01-01"
 }
 
