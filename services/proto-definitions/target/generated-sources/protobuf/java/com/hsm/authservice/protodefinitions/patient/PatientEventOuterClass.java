@@ -2,7 +2,7 @@
 // source: patient/patient_event.proto
 
 // Protobuf Java Version: 3.25.5
-package com.hsm.protodefinitions.patient;
+package com.hsm.authservice.protodefinitions.patient;
 
 public final class PatientEventOuterClass {
   private PatientEventOuterClass() {}

@@ -1,6 +1,23 @@
 version: "3.9"
 
 services:
+  auth-service-db:
+    image: mysql:latest
+    container_name: auth-service-db
+    restart: always
+    environment:
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_ALLOW_EMPTY_PASSWORD: false
+      MYSQL_RANDOM_ROOT_PASSWORD: false
+    volumes:
+      - auth-db-data:/var/lib/mysql1/data
+    ports:
+      - "3307:3306"
+    networks:
+      - internal
   patient-service-db:
     image: postgres:latest
     container_name: patient-service-db
@@ -38,12 +55,34 @@ services:
       - kafka-data:/var/lib/kafka/data
     networks:
       - internal
+  api-gateway:
+    image: api-gateway:latest
+    container_name: api-gateway
+    build: api-gateway
+    ports:
+      - "4004:4004"
+    networks:
+      - internal
+  auth-service:
+    image: auth-service:latest
+    container_name: auth-service
+    build: auth-service
+    environment:
+      SPRING_DATASOURCE_USERNAME: ${SPRING_DATASOURCE_USERNAME_MYSQL}
+      SPRING_DATASOURCE_PASSWORD: ${SPRING_DATASOURCE_PASSWORD_MYSQL}
+      SPRING_DATASOURCE_URL: ${SPRING_DATASOURCE_URL_MYSQL}
+      SPRING_JPA_HIBERNATE_DDL_AUTO: ${SPRING_JPA_HIBERNATE_DDL_AUTO_MYSQL}
+      SPRING_SQL_INIT_MODE: ${SPRING_SQL_INIT_MODE_MYSQL}
+      JWT_SECRET: ${JWT_SECRET}
+    depends_on:
+      auth-service-db:
+        condition: service_started
+    networks:
+      - internal
   patient-service:
     image: patient-service:latest
     container_name: patient-service
     build: patient-service
-    ports:
-      - "4000:4000"
     environment:
       SPRING_DATASOURCE_PASSWORD: ${SPRING_DATASOURCE_PASSWORD}
       SPRING_DATASOURCE_USERNAME: ${SPRING_DATASOURCE_USERNAME}
@@ -55,6 +94,7 @@ services:
       SPRING_KAFKA_BOOTSTRAP_SERVERS: ${SPRING_KAFKA_BOOTSTRAP_SERVERS}
     depends_on:
       - patient-service-db
+      - api-gateway
     networks:
       - internal
   billing-service:
@@ -97,6 +137,7 @@ services:
       - internal
     restart: unless-stopped
 volumes:
+  auth-db-data:
   patient-db-data:
   kafka-data:
 networks:

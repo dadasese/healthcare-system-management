@@ -1,6 +1,6 @@
-package com.hsm.billingservice.repository;
+package com.hsm.authservice.billingservice.repository;
 
-import com.hsm.billingservice.model.Billing;
+import com.hsm.authservice.billingservice.model.Billing;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

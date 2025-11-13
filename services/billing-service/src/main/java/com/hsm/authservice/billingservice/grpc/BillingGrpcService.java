@@ -1,17 +1,16 @@
-package com.hsm.billingservice.grpc;
+package com.hsm.authservice.billingservice.grpc;
 
-import com.hsm.billingservice.exception.EmailException;
-import com.hsm.billingservice.model.Billing;
-import com.hsm.billingservice.service.BillingService;
+import com.hsm.authservice.billingservice.exception.EmailException;
+import com.hsm.authservice.billingservice.model.Billing;
+import com.hsm.authservice.billingservice.service.BillingService;
+import com.hsm.authservice.protodefinitions.billing.*;
 import com.hsm.protodefinitions.billing.*;
-import com.hsm.protodefinitions.billing.BillingServiceGrpc.BillingServiceImplBase;
+import com.hsm.authservice.protodefinitions.billing.BillingServiceGrpc.BillingServiceImplBase;
 import io.grpc.Status;
 import io.grpc.stub.StreamObserver;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import net.devh.boot.grpc.server.service.GrpcService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.dao.DataIntegrityViolationException;
 
 @GrpcService

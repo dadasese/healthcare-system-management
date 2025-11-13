@@ -1,4 +1,4 @@
-package com.hsm.billingservice.exception;
+package com.hsm.authservice.billingservice.exception;
 
 public class EmailException extends RuntimeException{
 

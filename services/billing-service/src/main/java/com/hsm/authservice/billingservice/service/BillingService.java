@@ -1,9 +1,9 @@
-package com.hsm.billingservice.service;
+package com.hsm.authservice.billingservice.service;
 
-import com.hsm.billingservice.exception.EmailException;
-import com.hsm.billingservice.model.Billing;
-import com.hsm.billingservice.repository.BillingRepository;
-import com.hsm.billingservice.shared.Status;
+import com.hsm.authservice.billingservice.exception.EmailException;
+import com.hsm.authservice.billingservice.model.Billing;
+import com.hsm.authservice.billingservice.repository.BillingRepository;
+import com.hsm.authservice.billingservice.shared.Status;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

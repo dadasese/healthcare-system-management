@@ -2,7 +2,7 @@
 // source: patient/patient_event.proto
 
 // Protobuf Java Version: 3.25.5
-package com.hsm.protodefinitions.patient;
+package com.hsm.authservice.protodefinitions.patient;
 
 public interface PatientEventOrBuilder extends
     // @@protoc_insertion_point(interface_extends:PatientEvent)
@@ -52,5 +52,5 @@ public interface PatientEventOrBuilder extends
    * <code>optional .PatientEvent.EventType event_type = 4;</code>
    * @return The eventType.
    */
-  com.hsm.protodefinitions.patient.PatientEvent.EventType getEventType();
+  PatientEvent.EventType getEventType();
 }

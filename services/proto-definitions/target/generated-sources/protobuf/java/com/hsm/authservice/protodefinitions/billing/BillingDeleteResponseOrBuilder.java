@@ -2,7 +2,7 @@
 // source: billing/billing_service.proto
 
 // Protobuf Java Version: 3.25.5
-package com.hsm.protodefinitions.billing;
+package com.hsm.authservice.protodefinitions.billing;
 
 public interface BillingDeleteResponseOrBuilder extends
     // @@protoc_insertion_point(interface_extends:BillingDeleteResponse)

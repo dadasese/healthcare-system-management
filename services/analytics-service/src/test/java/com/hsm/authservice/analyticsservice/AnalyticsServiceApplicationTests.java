@@ -1,4 +1,4 @@
-package com.hsm.analyticsservice;
+package com.hsm.authservice.analyticsservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

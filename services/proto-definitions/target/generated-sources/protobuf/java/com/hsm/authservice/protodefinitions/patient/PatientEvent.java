@@ -2,7 +2,7 @@
 // source: patient/patient_event.proto
 
 // Protobuf Java Version: 3.25.5
-package com.hsm.protodefinitions.patient;
+package com.hsm.authservice.protodefinitions.patient;
 
 /**
  * Protobuf type {@code PatientEvent}
@@ -31,15 +31,15 @@ private static final long serialVersionUID = 0L;
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.hsm.protodefinitions.patient.PatientEventOuterClass.internal_static_PatientEvent_descriptor;
+    return PatientEventOuterClass.internal_static_PatientEvent_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.hsm.protodefinitions.patient.PatientEventOuterClass.internal_static_PatientEvent_fieldAccessorTable
+    return PatientEventOuterClass.internal_static_PatientEvent_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.hsm.protodefinitions.patient.PatientEvent.class, com.hsm.protodefinitions.patient.PatientEvent.Builder.class);
+            PatientEvent.class, PatientEvent.Builder.class);
   }
 
   /**
@@ -142,7 +142,7 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.hsm.protodefinitions.patient.PatientEvent.getDescriptor().getEnumTypes().get(0);
+      return PatientEvent.getDescriptor().getEnumTypes().get(0);
     }
 
     private static final EventType[] VALUES = values();
@@ -278,9 +278,9 @@ private static final long serialVersionUID = 0L;
    * <code>optional .PatientEvent.EventType event_type = 4;</code>
    * @return The eventType.
    */
-  @java.lang.Override public com.hsm.protodefinitions.patient.PatientEvent.EventType getEventType() {
-    com.hsm.protodefinitions.patient.PatientEvent.EventType result = com.hsm.protodefinitions.patient.PatientEvent.EventType.forNumber(eventType_);
-    return result == null ? com.hsm.protodefinitions.patient.PatientEvent.EventType.UNRECOGNIZED : result;
+  @java.lang.Override public PatientEvent.EventType getEventType() {
+    PatientEvent.EventType result = PatientEvent.EventType.forNumber(eventType_);
+    return result == null ? PatientEvent.EventType.UNRECOGNIZED : result;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -342,10 +342,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.hsm.protodefinitions.patient.PatientEvent)) {
+    if (!(obj instanceof PatientEvent)) {
       return super.equals(obj);
     }
-    com.hsm.protodefinitions.patient.PatientEvent other = (com.hsm.protodefinitions.patient.PatientEvent) obj;
+    PatientEvent other = (PatientEvent) obj;
 
     if (getPatientId()
         != other.getPatientId()) return false;
@@ -384,44 +384,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.hsm.protodefinitions.patient.PatientEvent parseFrom(
+  public static PatientEvent parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.hsm.protodefinitions.patient.PatientEvent parseFrom(
+  public static PatientEvent parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.hsm.protodefinitions.patient.PatientEvent parseFrom(
+  public static PatientEvent parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.hsm.protodefinitions.patient.PatientEvent parseFrom(
+  public static PatientEvent parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.hsm.protodefinitions.patient.PatientEvent parseFrom(byte[] data)
+  public static PatientEvent parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.hsm.protodefinitions.patient.PatientEvent parseFrom(
+  public static PatientEvent parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.hsm.protodefinitions.patient.PatientEvent parseFrom(java.io.InputStream input)
+  public static PatientEvent parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.hsm.protodefinitions.patient.PatientEvent parseFrom(
+  public static PatientEvent parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -429,26 +429,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.hsm.protodefinitions.patient.PatientEvent parseDelimitedFrom(java.io.InputStream input)
+  public static PatientEvent parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.hsm.protodefinitions.patient.PatientEvent parseDelimitedFrom(
+  public static PatientEvent parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.hsm.protodefinitions.patient.PatientEvent parseFrom(
+  public static PatientEvent parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.hsm.protodefinitions.patient.PatientEvent parseFrom(
+  public static PatientEvent parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -461,7 +461,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.hsm.protodefinitions.patient.PatientEvent prototype) {
+  public static Builder newBuilder(PatientEvent prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -482,18 +482,18 @@ private static final long serialVersionUID = 0L;
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:PatientEvent)
-      com.hsm.protodefinitions.patient.PatientEventOrBuilder {
+          PatientEventOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.hsm.protodefinitions.patient.PatientEventOuterClass.internal_static_PatientEvent_descriptor;
+      return PatientEventOuterClass.internal_static_PatientEvent_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.hsm.protodefinitions.patient.PatientEventOuterClass.internal_static_PatientEvent_fieldAccessorTable
+      return PatientEventOuterClass.internal_static_PatientEvent_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.hsm.protodefinitions.patient.PatientEvent.class, com.hsm.protodefinitions.patient.PatientEvent.Builder.class);
+              PatientEvent.class, PatientEvent.Builder.class);
     }
 
     // Construct using com.hsm.protodefinitions.patient.PatientEvent.newBuilder()
@@ -520,17 +520,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.hsm.protodefinitions.patient.PatientEventOuterClass.internal_static_PatientEvent_descriptor;
+      return PatientEventOuterClass.internal_static_PatientEvent_descriptor;
     }
 
     @java.lang.Override
-    public com.hsm.protodefinitions.patient.PatientEvent getDefaultInstanceForType() {
-      return com.hsm.protodefinitions.patient.PatientEvent.getDefaultInstance();
+    public PatientEvent getDefaultInstanceForType() {
+      return PatientEvent.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.hsm.protodefinitions.patient.PatientEvent build() {
-      com.hsm.protodefinitions.patient.PatientEvent result = buildPartial();
+    public PatientEvent build() {
+      PatientEvent result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -538,14 +538,14 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.hsm.protodefinitions.patient.PatientEvent buildPartial() {
-      com.hsm.protodefinitions.patient.PatientEvent result = new com.hsm.protodefinitions.patient.PatientEvent(this);
+    public PatientEvent buildPartial() {
+      PatientEvent result = new PatientEvent(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.hsm.protodefinitions.patient.PatientEvent result) {
+    private void buildPartial0(PatientEvent result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.patientId_ = patientId_;
@@ -598,16 +598,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.hsm.protodefinitions.patient.PatientEvent) {
-        return mergeFrom((com.hsm.protodefinitions.patient.PatientEvent)other);
+      if (other instanceof PatientEvent) {
+        return mergeFrom((PatientEvent)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.hsm.protodefinitions.patient.PatientEvent other) {
-      if (other == com.hsm.protodefinitions.patient.PatientEvent.getDefaultInstance()) return this;
+    public Builder mergeFrom(PatientEvent other) {
+      if (other == PatientEvent.getDefaultInstance()) return this;
       if (other.getPatientId() != 0L) {
         setPatientId(other.getPatientId());
       }
@@ -894,16 +894,16 @@ private static final long serialVersionUID = 0L;
      * @return The eventType.
      */
     @java.lang.Override
-    public com.hsm.protodefinitions.patient.PatientEvent.EventType getEventType() {
-      com.hsm.protodefinitions.patient.PatientEvent.EventType result = com.hsm.protodefinitions.patient.PatientEvent.EventType.forNumber(eventType_);
-      return result == null ? com.hsm.protodefinitions.patient.PatientEvent.EventType.UNRECOGNIZED : result;
+    public PatientEvent.EventType getEventType() {
+      PatientEvent.EventType result = PatientEvent.EventType.forNumber(eventType_);
+      return result == null ? PatientEvent.EventType.UNRECOGNIZED : result;
     }
     /**
      * <code>optional .PatientEvent.EventType event_type = 4;</code>
      * @param value The eventType to set.
      * @return This builder for chaining.
      */
-    public Builder setEventType(com.hsm.protodefinitions.patient.PatientEvent.EventType value) {
+    public Builder setEventType(PatientEvent.EventType value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -939,12 +939,12 @@ private static final long serialVersionUID = 0L;
   }
 
   // @@protoc_insertion_point(class_scope:PatientEvent)
-  private static final com.hsm.protodefinitions.patient.PatientEvent DEFAULT_INSTANCE;
+  private static final PatientEvent DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.hsm.protodefinitions.patient.PatientEvent();
+    DEFAULT_INSTANCE = new PatientEvent();
   }
 
-  public static com.hsm.protodefinitions.patient.PatientEvent getDefaultInstance() {
+  public static PatientEvent getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
@@ -980,7 +980,7 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
-  public com.hsm.protodefinitions.patient.PatientEvent getDefaultInstanceForType() {
+  public PatientEvent getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

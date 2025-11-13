@@ -2,7 +2,7 @@
 // source: billing/billing_service.proto
 
 // Protobuf Java Version: 3.25.5
-package com.hsm.protodefinitions.billing;
+package com.hsm.authservice.protodefinitions.billing;
 
 /**
  * Protobuf type {@code BillingResponse}
@@ -29,15 +29,15 @@ private static final long serialVersionUID = 0L;
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.hsm.protodefinitions.billing.BillingServiceOuterClass.internal_static_BillingResponse_descriptor;
+    return BillingServiceOuterClass.internal_static_BillingResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.hsm.protodefinitions.billing.BillingServiceOuterClass.internal_static_BillingResponse_fieldAccessorTable
+    return BillingServiceOuterClass.internal_static_BillingResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.hsm.protodefinitions.billing.BillingResponse.class, com.hsm.protodefinitions.billing.BillingResponse.Builder.class);
+            BillingResponse.class, BillingResponse.Builder.class);
   }
 
   public static final int ACCOUNTID_FIELD_NUMBER = 1;
@@ -136,10 +136,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.hsm.protodefinitions.billing.BillingResponse)) {
+    if (!(obj instanceof BillingResponse)) {
       return super.equals(obj);
     }
-    com.hsm.protodefinitions.billing.BillingResponse other = (com.hsm.protodefinitions.billing.BillingResponse) obj;
+    BillingResponse other = (BillingResponse) obj;
 
     if (getAccountId()
         != other.getAccountId()) return false;
@@ -166,44 +166,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.hsm.protodefinitions.billing.BillingResponse parseFrom(
+  public static BillingResponse parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.hsm.protodefinitions.billing.BillingResponse parseFrom(
+  public static BillingResponse parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.hsm.protodefinitions.billing.BillingResponse parseFrom(
+  public static BillingResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.hsm.protodefinitions.billing.BillingResponse parseFrom(
+  public static BillingResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.hsm.protodefinitions.billing.BillingResponse parseFrom(byte[] data)
+  public static BillingResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.hsm.protodefinitions.billing.BillingResponse parseFrom(
+  public static BillingResponse parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.hsm.protodefinitions.billing.BillingResponse parseFrom(java.io.InputStream input)
+  public static BillingResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.hsm.protodefinitions.billing.BillingResponse parseFrom(
+  public static BillingResponse parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -211,26 +211,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.hsm.protodefinitions.billing.BillingResponse parseDelimitedFrom(java.io.InputStream input)
+  public static BillingResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.hsm.protodefinitions.billing.BillingResponse parseDelimitedFrom(
+  public static BillingResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.hsm.protodefinitions.billing.BillingResponse parseFrom(
+  public static BillingResponse parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.hsm.protodefinitions.billing.BillingResponse parseFrom(
+  public static BillingResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -243,7 +243,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.hsm.protodefinitions.billing.BillingResponse prototype) {
+  public static Builder newBuilder(BillingResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -264,18 +264,18 @@ private static final long serialVersionUID = 0L;
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:BillingResponse)
-      com.hsm.protodefinitions.billing.BillingResponseOrBuilder {
+          BillingResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.hsm.protodefinitions.billing.BillingServiceOuterClass.internal_static_BillingResponse_descriptor;
+      return BillingServiceOuterClass.internal_static_BillingResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.hsm.protodefinitions.billing.BillingServiceOuterClass.internal_static_BillingResponse_fieldAccessorTable
+      return BillingServiceOuterClass.internal_static_BillingResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.hsm.protodefinitions.billing.BillingResponse.class, com.hsm.protodefinitions.billing.BillingResponse.Builder.class);
+              BillingResponse.class, BillingResponse.Builder.class);
     }
 
     // Construct using com.hsm.protodefinitions.billing.BillingResponse.newBuilder()
@@ -300,17 +300,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.hsm.protodefinitions.billing.BillingServiceOuterClass.internal_static_BillingResponse_descriptor;
+      return BillingServiceOuterClass.internal_static_BillingResponse_descriptor;
     }
 
     @java.lang.Override
-    public com.hsm.protodefinitions.billing.BillingResponse getDefaultInstanceForType() {
-      return com.hsm.protodefinitions.billing.BillingResponse.getDefaultInstance();
+    public BillingResponse getDefaultInstanceForType() {
+      return BillingResponse.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.hsm.protodefinitions.billing.BillingResponse build() {
-      com.hsm.protodefinitions.billing.BillingResponse result = buildPartial();
+    public BillingResponse build() {
+      BillingResponse result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -318,14 +318,14 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.hsm.protodefinitions.billing.BillingResponse buildPartial() {
-      com.hsm.protodefinitions.billing.BillingResponse result = new com.hsm.protodefinitions.billing.BillingResponse(this);
+    public BillingResponse buildPartial() {
+      BillingResponse result = new BillingResponse(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.hsm.protodefinitions.billing.BillingResponse result) {
+    private void buildPartial0(BillingResponse result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.accountId_ = accountId_;
@@ -369,16 +369,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.hsm.protodefinitions.billing.BillingResponse) {
-        return mergeFrom((com.hsm.protodefinitions.billing.BillingResponse)other);
+      if (other instanceof BillingResponse) {
+        return mergeFrom((BillingResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.hsm.protodefinitions.billing.BillingResponse other) {
-      if (other == com.hsm.protodefinitions.billing.BillingResponse.getDefaultInstance()) return this;
+    public Builder mergeFrom(BillingResponse other) {
+      if (other == BillingResponse.getDefaultInstance()) return this;
       if (other.getAccountId() != 0L) {
         setAccountId(other.getAccountId());
       }
@@ -560,12 +560,12 @@ private static final long serialVersionUID = 0L;
   }
 
   // @@protoc_insertion_point(class_scope:BillingResponse)
-  private static final com.hsm.protodefinitions.billing.BillingResponse DEFAULT_INSTANCE;
+  private static final BillingResponse DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.hsm.protodefinitions.billing.BillingResponse();
+    DEFAULT_INSTANCE = new BillingResponse();
   }
 
-  public static com.hsm.protodefinitions.billing.BillingResponse getDefaultInstance() {
+  public static BillingResponse getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
@@ -601,7 +601,7 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
-  public com.hsm.protodefinitions.billing.BillingResponse getDefaultInstanceForType() {
+  public BillingResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

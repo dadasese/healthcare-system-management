@@ -1,4 +1,4 @@
-package com.hsm.patientservice.model;
+package com.hsm.authservice.patientservice.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;

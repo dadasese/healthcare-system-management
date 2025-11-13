@@ -1,4 +1,4 @@
-package com.hsm.protodefinitions.billing;
+package com.hsm.authservice.protodefinitions.billing;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
@@ -15,29 +15,29 @@ public final class BillingServiceGrpc {
   public static final java.lang.String SERVICE_NAME = "BillingService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<com.hsm.protodefinitions.billing.BillingRequest,
-      com.hsm.protodefinitions.billing.BillingResponse> getCreateBillingAccountMethod;
+  private static volatile io.grpc.MethodDescriptor<BillingRequest,
+          BillingResponse> getCreateBillingAccountMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "CreateBillingAccount",
-      requestType = com.hsm.protodefinitions.billing.BillingRequest.class,
-      responseType = com.hsm.protodefinitions.billing.BillingResponse.class,
+      requestType = BillingRequest.class,
+      responseType = BillingResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.hsm.protodefinitions.billing.BillingRequest,
-      com.hsm.protodefinitions.billing.BillingResponse> getCreateBillingAccountMethod() {
-    io.grpc.MethodDescriptor<com.hsm.protodefinitions.billing.BillingRequest, com.hsm.protodefinitions.billing.BillingResponse> getCreateBillingAccountMethod;
+  public static io.grpc.MethodDescriptor<BillingRequest,
+          BillingResponse> getCreateBillingAccountMethod() {
+    io.grpc.MethodDescriptor<BillingRequest, BillingResponse> getCreateBillingAccountMethod;
     if ((getCreateBillingAccountMethod = BillingServiceGrpc.getCreateBillingAccountMethod) == null) {
       synchronized (BillingServiceGrpc.class) {
         if ((getCreateBillingAccountMethod = BillingServiceGrpc.getCreateBillingAccountMethod) == null) {
           BillingServiceGrpc.getCreateBillingAccountMethod = getCreateBillingAccountMethod =
-              io.grpc.MethodDescriptor.<com.hsm.protodefinitions.billing.BillingRequest, com.hsm.protodefinitions.billing.BillingResponse>newBuilder()
+              io.grpc.MethodDescriptor.<BillingRequest, BillingResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateBillingAccount"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.hsm.protodefinitions.billing.BillingRequest.getDefaultInstance()))
+                  BillingRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.hsm.protodefinitions.billing.BillingResponse.getDefaultInstance()))
+                  BillingResponse.getDefaultInstance()))
               .setSchemaDescriptor(new BillingServiceMethodDescriptorSupplier("CreateBillingAccount"))
               .build();
         }
@@ -46,29 +46,29 @@ public final class BillingServiceGrpc {
     return getCreateBillingAccountMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.hsm.protodefinitions.billing.BillingUpdateRequest,
-      com.hsm.protodefinitions.billing.BillingUpdateResponse> getUpdateBillingAccountMethod;
+  private static volatile io.grpc.MethodDescriptor<BillingUpdateRequest,
+          BillingUpdateResponse> getUpdateBillingAccountMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "UpdateBillingAccount",
-      requestType = com.hsm.protodefinitions.billing.BillingUpdateRequest.class,
-      responseType = com.hsm.protodefinitions.billing.BillingUpdateResponse.class,
+      requestType = BillingUpdateRequest.class,
+      responseType = BillingUpdateResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.hsm.protodefinitions.billing.BillingUpdateRequest,
-      com.hsm.protodefinitions.billing.BillingUpdateResponse> getUpdateBillingAccountMethod() {
-    io.grpc.MethodDescriptor<com.hsm.protodefinitions.billing.BillingUpdateRequest, com.hsm.protodefinitions.billing.BillingUpdateResponse> getUpdateBillingAccountMethod;
+  public static io.grpc.MethodDescriptor<BillingUpdateRequest,
+          BillingUpdateResponse> getUpdateBillingAccountMethod() {
+    io.grpc.MethodDescriptor<BillingUpdateRequest, BillingUpdateResponse> getUpdateBillingAccountMethod;
     if ((getUpdateBillingAccountMethod = BillingServiceGrpc.getUpdateBillingAccountMethod) == null) {
       synchronized (BillingServiceGrpc.class) {
         if ((getUpdateBillingAccountMethod = BillingServiceGrpc.getUpdateBillingAccountMethod) == null) {
           BillingServiceGrpc.getUpdateBillingAccountMethod = getUpdateBillingAccountMethod =
-              io.grpc.MethodDescriptor.<com.hsm.protodefinitions.billing.BillingUpdateRequest, com.hsm.protodefinitions.billing.BillingUpdateResponse>newBuilder()
+              io.grpc.MethodDescriptor.<BillingUpdateRequest, BillingUpdateResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateBillingAccount"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.hsm.protodefinitions.billing.BillingUpdateRequest.getDefaultInstance()))
+                  BillingUpdateRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.hsm.protodefinitions.billing.BillingUpdateResponse.getDefaultInstance()))
+                  BillingUpdateResponse.getDefaultInstance()))
               .setSchemaDescriptor(new BillingServiceMethodDescriptorSupplier("UpdateBillingAccount"))
               .build();
         }
@@ -77,29 +77,29 @@ public final class BillingServiceGrpc {
     return getUpdateBillingAccountMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.hsm.protodefinitions.billing.BillingDeleteRequest,
-      com.hsm.protodefinitions.billing.BillingDeleteResponse> getDeleteBillingAccountMethod;
+  private static volatile io.grpc.MethodDescriptor<BillingDeleteRequest,
+          BillingDeleteResponse> getDeleteBillingAccountMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "DeleteBillingAccount",
-      requestType = com.hsm.protodefinitions.billing.BillingDeleteRequest.class,
-      responseType = com.hsm.protodefinitions.billing.BillingDeleteResponse.class,
+      requestType = BillingDeleteRequest.class,
+      responseType = BillingDeleteResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.hsm.protodefinitions.billing.BillingDeleteRequest,
-      com.hsm.protodefinitions.billing.BillingDeleteResponse> getDeleteBillingAccountMethod() {
-    io.grpc.MethodDescriptor<com.hsm.protodefinitions.billing.BillingDeleteRequest, com.hsm.protodefinitions.billing.BillingDeleteResponse> getDeleteBillingAccountMethod;
+  public static io.grpc.MethodDescriptor<BillingDeleteRequest,
+          BillingDeleteResponse> getDeleteBillingAccountMethod() {
+    io.grpc.MethodDescriptor<BillingDeleteRequest, BillingDeleteResponse> getDeleteBillingAccountMethod;
     if ((getDeleteBillingAccountMethod = BillingServiceGrpc.getDeleteBillingAccountMethod) == null) {
       synchronized (BillingServiceGrpc.class) {
         if ((getDeleteBillingAccountMethod = BillingServiceGrpc.getDeleteBillingAccountMethod) == null) {
           BillingServiceGrpc.getDeleteBillingAccountMethod = getDeleteBillingAccountMethod =
-              io.grpc.MethodDescriptor.<com.hsm.protodefinitions.billing.BillingDeleteRequest, com.hsm.protodefinitions.billing.BillingDeleteResponse>newBuilder()
+              io.grpc.MethodDescriptor.<BillingDeleteRequest, BillingDeleteResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteBillingAccount"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.hsm.protodefinitions.billing.BillingDeleteRequest.getDefaultInstance()))
+                  BillingDeleteRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.hsm.protodefinitions.billing.BillingDeleteResponse.getDefaultInstance()))
+                  BillingDeleteResponse.getDefaultInstance()))
               .setSchemaDescriptor(new BillingServiceMethodDescriptorSupplier("DeleteBillingAccount"))
               .build();
         }
@@ -158,22 +158,22 @@ public final class BillingServiceGrpc {
 
     /**
      */
-    default void createBillingAccount(com.hsm.protodefinitions.billing.BillingRequest request,
-        io.grpc.stub.StreamObserver<com.hsm.protodefinitions.billing.BillingResponse> responseObserver) {
+    default void createBillingAccount(BillingRequest request,
+                                      io.grpc.stub.StreamObserver<BillingResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateBillingAccountMethod(), responseObserver);
     }
 
     /**
      */
-    default void updateBillingAccount(com.hsm.protodefinitions.billing.BillingUpdateRequest request,
-        io.grpc.stub.StreamObserver<com.hsm.protodefinitions.billing.BillingUpdateResponse> responseObserver) {
+    default void updateBillingAccount(BillingUpdateRequest request,
+                                      io.grpc.stub.StreamObserver<BillingUpdateResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateBillingAccountMethod(), responseObserver);
     }
 
     /**
      */
-    default void deleteBillingAccount(com.hsm.protodefinitions.billing.BillingDeleteRequest request,
-        io.grpc.stub.StreamObserver<com.hsm.protodefinitions.billing.BillingDeleteResponse> responseObserver) {
+    default void deleteBillingAccount(BillingDeleteRequest request,
+                                      io.grpc.stub.StreamObserver<BillingDeleteResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteBillingAccountMethod(), responseObserver);
     }
   }
@@ -207,24 +207,24 @@ public final class BillingServiceGrpc {
 
     /**
      */
-    public void createBillingAccount(com.hsm.protodefinitions.billing.BillingRequest request,
-        io.grpc.stub.StreamObserver<com.hsm.protodefinitions.billing.BillingResponse> responseObserver) {
+    public void createBillingAccount(BillingRequest request,
+                                     io.grpc.stub.StreamObserver<BillingResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateBillingAccountMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      */
-    public void updateBillingAccount(com.hsm.protodefinitions.billing.BillingUpdateRequest request,
-        io.grpc.stub.StreamObserver<com.hsm.protodefinitions.billing.BillingUpdateResponse> responseObserver) {
+    public void updateBillingAccount(BillingUpdateRequest request,
+                                     io.grpc.stub.StreamObserver<BillingUpdateResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateBillingAccountMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      */
-    public void deleteBillingAccount(com.hsm.protodefinitions.billing.BillingDeleteRequest request,
-        io.grpc.stub.StreamObserver<com.hsm.protodefinitions.billing.BillingDeleteResponse> responseObserver) {
+    public void deleteBillingAccount(BillingDeleteRequest request,
+                                     io.grpc.stub.StreamObserver<BillingDeleteResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteBillingAccountMethod(), getCallOptions()), request, responseObserver);
     }
@@ -248,21 +248,21 @@ public final class BillingServiceGrpc {
 
     /**
      */
-    public com.hsm.protodefinitions.billing.BillingResponse createBillingAccount(com.hsm.protodefinitions.billing.BillingRequest request) {
+    public BillingResponse createBillingAccount(BillingRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateBillingAccountMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public com.hsm.protodefinitions.billing.BillingUpdateResponse updateBillingAccount(com.hsm.protodefinitions.billing.BillingUpdateRequest request) {
+    public BillingUpdateResponse updateBillingAccount(BillingUpdateRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateBillingAccountMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public com.hsm.protodefinitions.billing.BillingDeleteResponse deleteBillingAccount(com.hsm.protodefinitions.billing.BillingDeleteRequest request) {
+    public BillingDeleteResponse deleteBillingAccount(BillingDeleteRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteBillingAccountMethod(), getCallOptions(), request);
     }
@@ -286,24 +286,24 @@ public final class BillingServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.hsm.protodefinitions.billing.BillingResponse> createBillingAccount(
-        com.hsm.protodefinitions.billing.BillingRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<BillingResponse> createBillingAccount(
+        BillingRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateBillingAccountMethod(), getCallOptions()), request);
     }
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.hsm.protodefinitions.billing.BillingUpdateResponse> updateBillingAccount(
-        com.hsm.protodefinitions.billing.BillingUpdateRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<BillingUpdateResponse> updateBillingAccount(
+        BillingUpdateRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateBillingAccountMethod(), getCallOptions()), request);
     }
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.hsm.protodefinitions.billing.BillingDeleteResponse> deleteBillingAccount(
-        com.hsm.protodefinitions.billing.BillingDeleteRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<BillingDeleteResponse> deleteBillingAccount(
+        BillingDeleteRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteBillingAccountMethod(), getCallOptions()), request);
     }
@@ -331,16 +331,16 @@ public final class BillingServiceGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_CREATE_BILLING_ACCOUNT:
-          serviceImpl.createBillingAccount((com.hsm.protodefinitions.billing.BillingRequest) request,
-              (io.grpc.stub.StreamObserver<com.hsm.protodefinitions.billing.BillingResponse>) responseObserver);
+          serviceImpl.createBillingAccount((BillingRequest) request,
+              (io.grpc.stub.StreamObserver<BillingResponse>) responseObserver);
           break;
         case METHODID_UPDATE_BILLING_ACCOUNT:
-          serviceImpl.updateBillingAccount((com.hsm.protodefinitions.billing.BillingUpdateRequest) request,
-              (io.grpc.stub.StreamObserver<com.hsm.protodefinitions.billing.BillingUpdateResponse>) responseObserver);
+          serviceImpl.updateBillingAccount((BillingUpdateRequest) request,
+              (io.grpc.stub.StreamObserver<BillingUpdateResponse>) responseObserver);
           break;
         case METHODID_DELETE_BILLING_ACCOUNT:
-          serviceImpl.deleteBillingAccount((com.hsm.protodefinitions.billing.BillingDeleteRequest) request,
-              (io.grpc.stub.StreamObserver<com.hsm.protodefinitions.billing.BillingDeleteResponse>) responseObserver);
+          serviceImpl.deleteBillingAccount((BillingDeleteRequest) request,
+              (io.grpc.stub.StreamObserver<BillingDeleteResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -364,22 +364,22 @@ public final class BillingServiceGrpc {
           getCreateBillingAccountMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.hsm.protodefinitions.billing.BillingRequest,
-              com.hsm.protodefinitions.billing.BillingResponse>(
+                    BillingRequest,
+                    BillingResponse>(
                 service, METHODID_CREATE_BILLING_ACCOUNT)))
         .addMethod(
           getUpdateBillingAccountMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.hsm.protodefinitions.billing.BillingUpdateRequest,
-              com.hsm.protodefinitions.billing.BillingUpdateResponse>(
+                    BillingUpdateRequest,
+                    BillingUpdateResponse>(
                 service, METHODID_UPDATE_BILLING_ACCOUNT)))
         .addMethod(
           getDeleteBillingAccountMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.hsm.protodefinitions.billing.BillingDeleteRequest,
-              com.hsm.protodefinitions.billing.BillingDeleteResponse>(
+                    BillingDeleteRequest,
+                    BillingDeleteResponse>(
                 service, METHODID_DELETE_BILLING_ACCOUNT)))
         .build();
   }
@@ -390,7 +390,7 @@ public final class BillingServiceGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return com.hsm.protodefinitions.billing.BillingServiceOuterClass.getDescriptor();
+      return BillingServiceOuterClass.getDescriptor();
     }
 
     @java.lang.Override

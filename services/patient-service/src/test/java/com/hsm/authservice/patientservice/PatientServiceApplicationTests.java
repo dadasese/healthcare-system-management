@@ -1,4 +1,4 @@
-package com.hsm.patientservice;
+package com.hsm.authservice.patientservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

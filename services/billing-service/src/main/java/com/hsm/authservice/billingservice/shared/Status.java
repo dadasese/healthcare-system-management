@@ -1,4 +1,4 @@
-package com.hsm.billingservice.shared;
+package com.hsm.authservice.billingservice.shared;
 
 public enum Status {
     ACTIVE,

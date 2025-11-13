@@ -1,10 +1,10 @@
-package com.hsm.analyticsservice.kafka;
+package com.hsm.authservice.analyticsservice.kafka;
 
 import com.google.protobuf.InvalidProtocolBufferException;
-import com.hsm.analyticsservice.model.PatientEventRecord;
-import com.hsm.analyticsservice.repository.PatientAnalyticsRepository;
-import com.hsm.analyticsservice.shared.EventType;
-import com.hsm.protodefinitions.patient.PatientEvent;
+import com.hsm.authservice.analyticsservice.model.PatientEventRecord;
+import com.hsm.authservice.analyticsservice.repository.PatientAnalyticsRepository;
+import com.hsm.authservice.analyticsservice.shared.EventType;
+import com.hsm.authservice.protodefinitions.patient.PatientEvent;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.kafka.annotation.KafkaListener;

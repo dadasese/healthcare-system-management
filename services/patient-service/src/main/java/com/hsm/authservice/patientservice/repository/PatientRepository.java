@@ -1,6 +1,6 @@
-package com.hsm.patientservice.repository;
+package com.hsm.authservice.patientservice.repository;
 
-import com.hsm.patientservice.model.Patient;
+import com.hsm.authservice.patientservice.model.Patient;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

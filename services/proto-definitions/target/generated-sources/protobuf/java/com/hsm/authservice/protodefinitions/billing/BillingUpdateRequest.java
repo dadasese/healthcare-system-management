@@ -2,7 +2,7 @@
 // source: billing/billing_service.proto
 
 // Protobuf Java Version: 3.25.5
-package com.hsm.protodefinitions.billing;
+package com.hsm.authservice.protodefinitions.billing;
 
 /**
  * Protobuf type {@code BillingUpdateRequest}
@@ -30,15 +30,15 @@ private static final long serialVersionUID = 0L;
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.hsm.protodefinitions.billing.BillingServiceOuterClass.internal_static_BillingUpdateRequest_descriptor;
+    return BillingServiceOuterClass.internal_static_BillingUpdateRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.hsm.protodefinitions.billing.BillingServiceOuterClass.internal_static_BillingUpdateRequest_fieldAccessorTable
+    return BillingServiceOuterClass.internal_static_BillingUpdateRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.hsm.protodefinitions.billing.BillingUpdateRequest.class, com.hsm.protodefinitions.billing.BillingUpdateRequest.Builder.class);
+            BillingUpdateRequest.class, BillingUpdateRequest.Builder.class);
   }
 
   public static final int PATIENTID_FIELD_NUMBER = 1;
@@ -182,10 +182,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.hsm.protodefinitions.billing.BillingUpdateRequest)) {
+    if (!(obj instanceof BillingUpdateRequest)) {
       return super.equals(obj);
     }
-    com.hsm.protodefinitions.billing.BillingUpdateRequest other = (com.hsm.protodefinitions.billing.BillingUpdateRequest) obj;
+    BillingUpdateRequest other = (BillingUpdateRequest) obj;
 
     if (getPatientId()
         != other.getPatientId()) return false;
@@ -216,44 +216,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.hsm.protodefinitions.billing.BillingUpdateRequest parseFrom(
+  public static BillingUpdateRequest parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.hsm.protodefinitions.billing.BillingUpdateRequest parseFrom(
+  public static BillingUpdateRequest parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.hsm.protodefinitions.billing.BillingUpdateRequest parseFrom(
+  public static BillingUpdateRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.hsm.protodefinitions.billing.BillingUpdateRequest parseFrom(
+  public static BillingUpdateRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.hsm.protodefinitions.billing.BillingUpdateRequest parseFrom(byte[] data)
+  public static BillingUpdateRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.hsm.protodefinitions.billing.BillingUpdateRequest parseFrom(
+  public static BillingUpdateRequest parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.hsm.protodefinitions.billing.BillingUpdateRequest parseFrom(java.io.InputStream input)
+  public static BillingUpdateRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.hsm.protodefinitions.billing.BillingUpdateRequest parseFrom(
+  public static BillingUpdateRequest parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -261,26 +261,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.hsm.protodefinitions.billing.BillingUpdateRequest parseDelimitedFrom(java.io.InputStream input)
+  public static BillingUpdateRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.hsm.protodefinitions.billing.BillingUpdateRequest parseDelimitedFrom(
+  public static BillingUpdateRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.hsm.protodefinitions.billing.BillingUpdateRequest parseFrom(
+  public static BillingUpdateRequest parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.hsm.protodefinitions.billing.BillingUpdateRequest parseFrom(
+  public static BillingUpdateRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -293,7 +293,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.hsm.protodefinitions.billing.BillingUpdateRequest prototype) {
+  public static Builder newBuilder(BillingUpdateRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -314,18 +314,18 @@ private static final long serialVersionUID = 0L;
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:BillingUpdateRequest)
-      com.hsm.protodefinitions.billing.BillingUpdateRequestOrBuilder {
+          BillingUpdateRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.hsm.protodefinitions.billing.BillingServiceOuterClass.internal_static_BillingUpdateRequest_descriptor;
+      return BillingServiceOuterClass.internal_static_BillingUpdateRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.hsm.protodefinitions.billing.BillingServiceOuterClass.internal_static_BillingUpdateRequest_fieldAccessorTable
+      return BillingServiceOuterClass.internal_static_BillingUpdateRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.hsm.protodefinitions.billing.BillingUpdateRequest.class, com.hsm.protodefinitions.billing.BillingUpdateRequest.Builder.class);
+              BillingUpdateRequest.class, BillingUpdateRequest.Builder.class);
     }
 
     // Construct using com.hsm.protodefinitions.billing.BillingUpdateRequest.newBuilder()
@@ -351,17 +351,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.hsm.protodefinitions.billing.BillingServiceOuterClass.internal_static_BillingUpdateRequest_descriptor;
+      return BillingServiceOuterClass.internal_static_BillingUpdateRequest_descriptor;
     }
 
     @java.lang.Override
-    public com.hsm.protodefinitions.billing.BillingUpdateRequest getDefaultInstanceForType() {
-      return com.hsm.protodefinitions.billing.BillingUpdateRequest.getDefaultInstance();
+    public BillingUpdateRequest getDefaultInstanceForType() {
+      return BillingUpdateRequest.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.hsm.protodefinitions.billing.BillingUpdateRequest build() {
-      com.hsm.protodefinitions.billing.BillingUpdateRequest result = buildPartial();
+    public BillingUpdateRequest build() {
+      BillingUpdateRequest result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -369,14 +369,14 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.hsm.protodefinitions.billing.BillingUpdateRequest buildPartial() {
-      com.hsm.protodefinitions.billing.BillingUpdateRequest result = new com.hsm.protodefinitions.billing.BillingUpdateRequest(this);
+    public BillingUpdateRequest buildPartial() {
+      BillingUpdateRequest result = new BillingUpdateRequest(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.hsm.protodefinitions.billing.BillingUpdateRequest result) {
+    private void buildPartial0(BillingUpdateRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.patientId_ = patientId_;
@@ -423,16 +423,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.hsm.protodefinitions.billing.BillingUpdateRequest) {
-        return mergeFrom((com.hsm.protodefinitions.billing.BillingUpdateRequest)other);
+      if (other instanceof BillingUpdateRequest) {
+        return mergeFrom((BillingUpdateRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.hsm.protodefinitions.billing.BillingUpdateRequest other) {
-      if (other == com.hsm.protodefinitions.billing.BillingUpdateRequest.getDefaultInstance()) return this;
+    public Builder mergeFrom(BillingUpdateRequest other) {
+      if (other == BillingUpdateRequest.getDefaultInstance()) return this;
       if (other.getPatientId() != 0L) {
         setPatientId(other.getPatientId());
       }
@@ -696,12 +696,12 @@ private static final long serialVersionUID = 0L;
   }
 
   // @@protoc_insertion_point(class_scope:BillingUpdateRequest)
-  private static final com.hsm.protodefinitions.billing.BillingUpdateRequest DEFAULT_INSTANCE;
+  private static final BillingUpdateRequest DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.hsm.protodefinitions.billing.BillingUpdateRequest();
+    DEFAULT_INSTANCE = new BillingUpdateRequest();
   }
 
-  public static com.hsm.protodefinitions.billing.BillingUpdateRequest getDefaultInstance() {
+  public static BillingUpdateRequest getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
@@ -737,7 +737,7 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
-  public com.hsm.protodefinitions.billing.BillingUpdateRequest getDefaultInstanceForType() {
+  public BillingUpdateRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

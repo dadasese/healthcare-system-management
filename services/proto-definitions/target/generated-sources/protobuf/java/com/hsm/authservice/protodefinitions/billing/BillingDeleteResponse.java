@@ -2,7 +2,7 @@
 // source: billing/billing_service.proto
 
 // Protobuf Java Version: 3.25.5
-package com.hsm.protodefinitions.billing;
+package com.hsm.authservice.protodefinitions.billing;
 
 /**
  * Protobuf type {@code BillingDeleteResponse}
@@ -29,15 +29,15 @@ private static final long serialVersionUID = 0L;
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.hsm.protodefinitions.billing.BillingServiceOuterClass.internal_static_BillingDeleteResponse_descriptor;
+    return BillingServiceOuterClass.internal_static_BillingDeleteResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.hsm.protodefinitions.billing.BillingServiceOuterClass.internal_static_BillingDeleteResponse_fieldAccessorTable
+    return BillingServiceOuterClass.internal_static_BillingDeleteResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.hsm.protodefinitions.billing.BillingDeleteResponse.class, com.hsm.protodefinitions.billing.BillingDeleteResponse.Builder.class);
+            BillingDeleteResponse.class, BillingDeleteResponse.Builder.class);
   }
 
   public static final int MESSAGE_FIELD_NUMBER = 1;
@@ -118,10 +118,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.hsm.protodefinitions.billing.BillingDeleteResponse)) {
+    if (!(obj instanceof BillingDeleteResponse)) {
       return super.equals(obj);
     }
-    com.hsm.protodefinitions.billing.BillingDeleteResponse other = (com.hsm.protodefinitions.billing.BillingDeleteResponse) obj;
+    BillingDeleteResponse other = (BillingDeleteResponse) obj;
 
     if (!getMessage()
         .equals(other.getMessage())) return false;
@@ -143,44 +143,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.hsm.protodefinitions.billing.BillingDeleteResponse parseFrom(
+  public static BillingDeleteResponse parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.hsm.protodefinitions.billing.BillingDeleteResponse parseFrom(
+  public static BillingDeleteResponse parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.hsm.protodefinitions.billing.BillingDeleteResponse parseFrom(
+  public static BillingDeleteResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.hsm.protodefinitions.billing.BillingDeleteResponse parseFrom(
+  public static BillingDeleteResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.hsm.protodefinitions.billing.BillingDeleteResponse parseFrom(byte[] data)
+  public static BillingDeleteResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.hsm.protodefinitions.billing.BillingDeleteResponse parseFrom(
+  public static BillingDeleteResponse parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.hsm.protodefinitions.billing.BillingDeleteResponse parseFrom(java.io.InputStream input)
+  public static BillingDeleteResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.hsm.protodefinitions.billing.BillingDeleteResponse parseFrom(
+  public static BillingDeleteResponse parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -188,26 +188,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.hsm.protodefinitions.billing.BillingDeleteResponse parseDelimitedFrom(java.io.InputStream input)
+  public static BillingDeleteResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.hsm.protodefinitions.billing.BillingDeleteResponse parseDelimitedFrom(
+  public static BillingDeleteResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.hsm.protodefinitions.billing.BillingDeleteResponse parseFrom(
+  public static BillingDeleteResponse parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.hsm.protodefinitions.billing.BillingDeleteResponse parseFrom(
+  public static BillingDeleteResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -220,7 +220,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.hsm.protodefinitions.billing.BillingDeleteResponse prototype) {
+  public static Builder newBuilder(BillingDeleteResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -241,18 +241,18 @@ private static final long serialVersionUID = 0L;
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:BillingDeleteResponse)
-      com.hsm.protodefinitions.billing.BillingDeleteResponseOrBuilder {
+          BillingDeleteResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.hsm.protodefinitions.billing.BillingServiceOuterClass.internal_static_BillingDeleteResponse_descriptor;
+      return BillingServiceOuterClass.internal_static_BillingDeleteResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.hsm.protodefinitions.billing.BillingServiceOuterClass.internal_static_BillingDeleteResponse_fieldAccessorTable
+      return BillingServiceOuterClass.internal_static_BillingDeleteResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.hsm.protodefinitions.billing.BillingDeleteResponse.class, com.hsm.protodefinitions.billing.BillingDeleteResponse.Builder.class);
+              BillingDeleteResponse.class, BillingDeleteResponse.Builder.class);
     }
 
     // Construct using com.hsm.protodefinitions.billing.BillingDeleteResponse.newBuilder()
@@ -276,17 +276,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.hsm.protodefinitions.billing.BillingServiceOuterClass.internal_static_BillingDeleteResponse_descriptor;
+      return BillingServiceOuterClass.internal_static_BillingDeleteResponse_descriptor;
     }
 
     @java.lang.Override
-    public com.hsm.protodefinitions.billing.BillingDeleteResponse getDefaultInstanceForType() {
-      return com.hsm.protodefinitions.billing.BillingDeleteResponse.getDefaultInstance();
+    public BillingDeleteResponse getDefaultInstanceForType() {
+      return BillingDeleteResponse.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.hsm.protodefinitions.billing.BillingDeleteResponse build() {
-      com.hsm.protodefinitions.billing.BillingDeleteResponse result = buildPartial();
+    public BillingDeleteResponse build() {
+      BillingDeleteResponse result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -294,14 +294,14 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.hsm.protodefinitions.billing.BillingDeleteResponse buildPartial() {
-      com.hsm.protodefinitions.billing.BillingDeleteResponse result = new com.hsm.protodefinitions.billing.BillingDeleteResponse(this);
+    public BillingDeleteResponse buildPartial() {
+      BillingDeleteResponse result = new BillingDeleteResponse(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.hsm.protodefinitions.billing.BillingDeleteResponse result) {
+    private void buildPartial0(BillingDeleteResponse result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.message_ = message_;
@@ -342,16 +342,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.hsm.protodefinitions.billing.BillingDeleteResponse) {
-        return mergeFrom((com.hsm.protodefinitions.billing.BillingDeleteResponse)other);
+      if (other instanceof BillingDeleteResponse) {
+        return mergeFrom((BillingDeleteResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.hsm.protodefinitions.billing.BillingDeleteResponse other) {
-      if (other == com.hsm.protodefinitions.billing.BillingDeleteResponse.getDefaultInstance()) return this;
+    public Builder mergeFrom(BillingDeleteResponse other) {
+      if (other == BillingDeleteResponse.getDefaultInstance()) return this;
       if (!other.getMessage().isEmpty()) {
         message_ = other.message_;
         bitField0_ |= 0x00000001;
@@ -493,12 +493,12 @@ private static final long serialVersionUID = 0L;
   }
 
   // @@protoc_insertion_point(class_scope:BillingDeleteResponse)
-  private static final com.hsm.protodefinitions.billing.BillingDeleteResponse DEFAULT_INSTANCE;
+  private static final BillingDeleteResponse DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.hsm.protodefinitions.billing.BillingDeleteResponse();
+    DEFAULT_INSTANCE = new BillingDeleteResponse();
   }
 
-  public static com.hsm.protodefinitions.billing.BillingDeleteResponse getDefaultInstance() {
+  public static BillingDeleteResponse getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
@@ -534,7 +534,7 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
-  public com.hsm.protodefinitions.billing.BillingDeleteResponse getDefaultInstanceForType() {
+  public BillingDeleteResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

@@ -1,4 +1,4 @@
-package com.hsm.billingservice;
+package com.hsm.authservice.billingservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

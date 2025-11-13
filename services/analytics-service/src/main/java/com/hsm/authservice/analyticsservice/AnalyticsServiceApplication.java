@@ -1,4 +1,4 @@
-package com.hsm.analyticsservice;
+package com.hsm.authservice.analyticsservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

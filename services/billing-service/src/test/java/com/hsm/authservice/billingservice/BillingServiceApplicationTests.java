@@ -1,4 +1,4 @@
-package com.hsm.billingservice;
+package com.hsm.authservice.billingservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
