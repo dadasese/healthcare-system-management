@@ -49,7 +49,7 @@ public class UserController {
         }
     }
 
-    @Operation(summary = "Update user password information")
+    @Operation(summary = "Update user password")
     @PutMapping("/{userId}")
     public ResponseEntity<UserResponseDTO> updatePassword(
             @PathVariable Long userId, @Valid
@@ -62,7 +62,7 @@ public class UserController {
         }
     }
 
-    @Operation(summary = "Disable user status information")
+    @Operation(summary = "Disable a user")
     @PutMapping("/{userId}/disable")
     public ResponseEntity<UserResponseDTO> disableUser(@PathVariable Long userId) {
         try {
@@ -73,7 +73,7 @@ public class UserController {
         }
     }
 
-    @Operation(summary = "Enable user status information")
+    @Operation(summary = "Enable a user")
     @PutMapping("/{userId}/enable")
     public ResponseEntity<UserResponseDTO> enableUser(
             @PathVariable Long userId
