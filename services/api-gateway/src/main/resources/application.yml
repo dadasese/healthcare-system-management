@@ -8,7 +8,6 @@ spring:
          # ============================================
          # AUTH SERVICE ROUTES (Public - No JWT Filter)
          # ============================================
-
          # Login endpoint - public
          - id: auth-login-route
            uri: http://auth-service:4005
@@ -28,7 +27,6 @@ spring:
          # ============================================
          # USER MANAGEMENT ROUTES (Protected - JWT Required)
          # ============================================
-
          # User CRUD operations - protected
          - id: user-management-route
            uri: http://auth-service:4005
@@ -39,7 +37,6 @@ spring:
          # ============================================
          # PATIENT SERVICE ROUTES (Protected)
          # ============================================
-
          # Patient operations - Protected
          - id: patient-service-route
            uri: http://patient-service:4000
@@ -48,7 +45,6 @@ spring:
          # ============================================
          # API DOCUMENTATION ROUTES (Protected)
          # ============================================
-
          # API Docs - Patient Service
          - id: api-docs-patient-route
            uri: http://patient-service:4000
@@ -60,3 +56,8 @@ logging:
   level:
     org.springframework.cloud.gateway: DEBUG
     reactor.netty: DEBUG
+management:
+  endpoints:
+    web:
+      exposure:
+        include: gateway,health,info
