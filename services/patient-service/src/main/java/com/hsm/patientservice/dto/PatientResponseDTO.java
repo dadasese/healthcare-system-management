@@ -1,4 +1,4 @@
-package com.hsm.authservice.patientservice.dto;
+package com.hsm.patientservice.dto;
 
 
 import lombok.Getter;

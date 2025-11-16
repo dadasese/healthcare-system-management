@@ -1,8 +1,8 @@
-package com.hsm.authservice.billingservice.grpc;
+package com.hsm.billingservice.grpc;
 
-import com.hsm.authservice.billingservice.exception.EmailException;
-import com.hsm.authservice.billingservice.model.Billing;
-import com.hsm.authservice.billingservice.service.BillingService;
+import com.hsm.billingservice.exception.EmailException;
+import com.hsm.billingservice.model.Billing;
+import com.hsm.billingservice.service.BillingService;
 import com.hsm.authservice.protodefinitions.billing.*;
 import com.hsm.protodefinitions.billing.*;
 import com.hsm.authservice.protodefinitions.billing.BillingServiceGrpc.BillingServiceImplBase;

@@ -1,4 +1,4 @@
-package com.hsm.api_gateway;
+package com.hsm.apigateway;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

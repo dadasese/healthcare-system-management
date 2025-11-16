@@ -1,4 +1,4 @@
-package com.hsm.authservice.patientservice.grpc;
+package com.hsm.patientservice.grpc;
 
 import com.hsm.authservice.protodefinitions.billing.*;
 import com.hsm.protodefinitions.billing.*;

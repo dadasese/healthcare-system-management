@@ -1,4 +1,4 @@
-package com.hsm.authservice.patientservice;
+package com.hsm.patientservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,6 +1,6 @@
-package com.hsm.authservice.billingservice.model;
+package com.hsm.billingservice.model;
 
-import com.hsm.authservice.billingservice.shared.Status;
+import com.hsm.billingservice.shared.Status;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;

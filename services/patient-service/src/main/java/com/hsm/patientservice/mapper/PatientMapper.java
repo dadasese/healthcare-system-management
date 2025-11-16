@@ -1,9 +1,9 @@
-package com.hsm.authservice.patientservice.mapper;
+package com.hsm.patientservice.mapper;
 
 
-import com.hsm.authservice.patientservice.dto.PatientRequestDTO;
-import com.hsm.authservice.patientservice.dto.PatientResponseDTO;
-import com.hsm.authservice.patientservice.model.Patient;
+import com.hsm.patientservice.dto.PatientRequestDTO;
+import com.hsm.patientservice.dto.PatientResponseDTO;
+import com.hsm.patientservice.model.Patient;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.MappingTarget;

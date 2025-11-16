@@ -1,6 +1,6 @@
-package com.hsm.authservice.patientservice.kafka;
+package com.hsm.patientservice.kafka;
 
-import com.hsm.authservice.patientservice.model.Patient;
+import com.hsm.patientservice.model.Patient;
 import com.hsm.authservice.protodefinitions.patient.PatientEvent;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

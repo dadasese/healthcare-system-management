@@ -1,12 +1,9 @@
 package com.hsm.authservice.service;
 
-import com.hsm.authservice.dto.LoginRequestDTO;
-import com.hsm.authservice.model.User;
-import com.hsm.authservice.repository.UserRepository;
+import com.hsm.authservice.dto.auth.LoginRequestDTO;
 import com.hsm.authservice.util.JwtUtil;
 import io.jsonwebtoken.JwtException;
 import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -22,6 +19,7 @@ public class AuthService {
 
     public Optional<String> authenticate(LoginRequestDTO loginRequestDTO){
         return userService.findByEmail(loginRequestDTO.getEmail())
+                .filter(u -> "ACTIVE".equals(u.getStatus()))
                 .filter(u -> passwordEncoder.matches(
                         loginRequestDTO.getPassword(), u.getPassword()))
                 .map(u -> jwtUtil.generateToken(u.getEmail(), u.getRole()));

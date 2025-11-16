@@ -1,4 +1,4 @@
-package com.hsm.authservice.dto.update;
+package com.hsm.authservice.dto.user;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;

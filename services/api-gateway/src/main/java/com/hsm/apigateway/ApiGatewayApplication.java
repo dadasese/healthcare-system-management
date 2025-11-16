@@ -1,4 +1,4 @@
-package com.hsm.authservice.api_gateway;
+package com.hsm.apigateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

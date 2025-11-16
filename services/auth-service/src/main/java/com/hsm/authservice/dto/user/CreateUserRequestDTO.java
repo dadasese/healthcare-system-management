@@ -1,4 +1,4 @@
-package com.hsm.authservice.dto.create;
+package com.hsm.authservice.dto.user;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;

@@ -1,7 +1,7 @@
-package com.hsm.authservice.analyticsservice.model;
+package com.hsm.analyticsservice.model;
 
 
-import com.hsm.authservice.analyticsservice.shared.EventType;
+import com.hsm.analyticsservice.shared.EventType;
 import jakarta.persistence.*;
 import lombok.*;
 

@@ -1,4 +1,4 @@
-package com.hsm.authservice.patientservice.dto.validators;
+package com.hsm.patientservice.dto.validators;
 
 public interface ModelValidationGroup {
 }

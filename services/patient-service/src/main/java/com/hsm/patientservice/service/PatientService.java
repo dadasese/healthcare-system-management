@@ -1,14 +1,14 @@
-package com.hsm.authservice.patientservice.service;
+package com.hsm.patientservice.service;
 
-import com.hsm.authservice.patientservice.dto.PatientRequestDTO;
-import com.hsm.authservice.patientservice.dto.PatientResponseDTO;
-import com.hsm.authservice.patientservice.exception.EmailException;
-import com.hsm.authservice.patientservice.exception.ModelNotFoundException;
-import com.hsm.authservice.patientservice.grpc.BillingServiceGrpcClient;
-import com.hsm.authservice.patientservice.kafka.KafkaProducer;
-import com.hsm.authservice.patientservice.mapper.PatientMapper;
-import com.hsm.authservice.patientservice.model.Patient;
-import com.hsm.authservice.patientservice.repository.PatientRepository;
+import com.hsm.patientservice.dto.PatientRequestDTO;
+import com.hsm.patientservice.dto.PatientResponseDTO;
+import com.hsm.patientservice.exception.EmailException;
+import com.hsm.patientservice.exception.ModelNotFoundException;
+import com.hsm.patientservice.grpc.BillingServiceGrpcClient;
+import com.hsm.patientservice.kafka.KafkaProducer;
+import com.hsm.patientservice.mapper.PatientMapper;
+import com.hsm.patientservice.model.Patient;
+import com.hsm.patientservice.repository.PatientRepository;
 import com.hsm.authservice.protodefinitions.patient.PatientEvent;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;

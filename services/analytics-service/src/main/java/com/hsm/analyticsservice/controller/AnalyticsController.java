@@ -1,4 +1,4 @@
-package com.hsm.authservice.analyticsservice.controller;
+package com.hsm.analyticsservice.controller;
 
 public class AnalyticsController {
 

@@ -1,4 +1,4 @@
-package com.hsm.authservice.analyticsservice.shared;
+package com.hsm.analyticsservice.shared;
 
 public enum EventType {
     CREATED, UPDATED, DELETED, UNKNOWN

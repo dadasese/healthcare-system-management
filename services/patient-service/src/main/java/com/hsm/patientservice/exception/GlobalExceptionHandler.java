@@ -1,4 +1,4 @@
-package com.hsm.authservice.patientservice.exception;
+package com.hsm.patientservice.exception;
 
 
 import org.slf4j.Logger;

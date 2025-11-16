@@ -5,27 +5,58 @@ spring:
   cloud:
     gateway:
       routes:
-         ## REST CLIENT -> http://localhost:4004/auth/login
-         ## API GATEWAY -> http://auth-service:4005/login
-         ## AUTH SERVICE (SPRING BOOT APP) -> /login -> token
-         - id: auth-service-route
+         # ============================================
+         # AUTH SERVICE ROUTES (Public - No JWT Filter)
+         # ============================================
+
+         # Login endpoint - public
+         - id: auth-login-route
            uri: http://auth-service:4005
            predicates:
-             - Path=/auth/**
+             - Path=/auth/login
+             - Method=POST
            filters:
              - StripPrefix=1
-         ## REST CLIENT -> http://localhost:4004/api/patients
-         ## API GATEWAY -> http://patient-service:4000:/patients
-         ## PATIENT SERVICE (SPRINT BOOT APP) ->  /patients -> Patients Array
+         # Token validation endpoint - Public
+         - id: auth-validation-route
+           uri: http://auth-service:4005
+           predicates:
+             - Path=/auth/validate
+             - Method=GET
+           filters:
+             - StripPrefix=1
+         # ============================================
+         # USER MANAGEMENT ROUTES (Protected - JWT Required)
+         # ============================================
+
+         # User CRUD operations - protected
+         - id: user-management-route
+           uri: http://auth-service:4005
+           predicates:
+             - Path=/auth/users/**
+           filters:
+              - StripPrefix=1
+         # ============================================
+         # PATIENT SERVICE ROUTES (Protected)
+         # ============================================
+
+         # Patient operations - Protected
          - id: patient-service-route
            uri: http://patient-service:4000
            predicates:
              - Path=/api/v1/patients/**
-        ## REST-CLIENT -> http://localhost:4004/api-docs/patients
-        ## API-GATEWAY -> http://patient-service:4000/v3/api-docs
+         # ============================================
+         # API DOCUMENTATION ROUTES (Protected)
+         # ============================================
+
+         # API Docs - Patient Service
          - id: api-docs-patient-route
            uri: http://patient-service:4000
            predicates:
              - Path=/api-docs/patients
            filters:
              - RewritePath=/api-docs/patients,/v3/api-docs
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG
+    reactor.netty: DEBUG

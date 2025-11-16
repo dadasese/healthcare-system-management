@@ -1,9 +1,9 @@
-package com.hsm.authservice.patientservice.controller;
+package com.hsm.patientservice.controller;
 
-import com.hsm.authservice.patientservice.dto.PatientRequestDTO;
-import com.hsm.authservice.patientservice.dto.PatientResponseDTO;
-import com.hsm.authservice.patientservice.dto.validators.ModelValidationGroup;
-import com.hsm.authservice.patientservice.service.PatientService;
+import com.hsm.patientservice.dto.PatientRequestDTO;
+import com.hsm.patientservice.dto.PatientResponseDTO;
+import com.hsm.patientservice.dto.validators.ModelValidationGroup;
+import com.hsm.patientservice.service.PatientService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.groups.Default;

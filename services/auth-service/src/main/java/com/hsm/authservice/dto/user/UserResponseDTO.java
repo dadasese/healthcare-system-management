@@ -1,4 +1,4 @@
-package com.hsm.authservice.dto.response;
+package com.hsm.authservice.dto.user;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

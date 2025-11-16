@@ -1,7 +1,7 @@
-package com.hsm.authservice.patientservice.dto;
+package com.hsm.patientservice.dto;
 
 
-import com.hsm.authservice.patientservice.dto.validators.ModelValidationGroup;
+import com.hsm.patientservice.dto.validators.ModelValidationGroup;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

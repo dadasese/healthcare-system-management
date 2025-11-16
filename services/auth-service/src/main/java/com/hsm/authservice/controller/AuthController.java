@@ -1,7 +1,7 @@
 package com.hsm.authservice.controller;
 
-import com.hsm.authservice.dto.LoginRequestDTO;
-import com.hsm.authservice.dto.LoginResponseDTO;
+import com.hsm.authservice.dto.auth.LoginRequestDTO;
+import com.hsm.authservice.dto.auth.LoginResponseDTO;
 import com.hsm.authservice.service.AuthService;
 import io.swagger.v3.oas.annotations.Operation;
 import lombok.AllArgsConstructor;
@@ -9,13 +9,11 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.swing.text.html.Option;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.Date;
 import java.util.Optional;
 
 @RestController
+@RequestMapping("/auth")
 @AllArgsConstructor
 public class AuthController {
 
