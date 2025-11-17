@@ -42,6 +42,8 @@ spring:
            uri: http://patient-service:4000
            predicates:
              - Path=/api/v1/patients/**
+           filters:
+             - Authentication
          # ============================================
          # API DOCUMENTATION ROUTES (Protected)
          # ============================================
@@ -52,6 +54,7 @@ spring:
              - Path=/api-docs/patients
            filters:
              - RewritePath=/api-docs/patients,/v3/api-docs
+             - Authentication
 logging:
   level:
     org.springframework.cloud.gateway: DEBUG
