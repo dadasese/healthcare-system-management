@@ -9,7 +9,7 @@ import com.hsm.patientservice.kafka.KafkaProducer;
 import com.hsm.patientservice.mapper.PatientMapper;
 import com.hsm.patientservice.model.Patient;
 import com.hsm.patientservice.repository.PatientRepository;
-import com.hsm.authservice.protodefinitions.patient.PatientEvent;
+import com.hsm.protodefinitions.patient.PatientEvent;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.slf4j.Logger;
