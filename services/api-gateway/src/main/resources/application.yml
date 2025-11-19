@@ -14,16 +14,12 @@ spring:
            predicates:
              - Path=/auth/login
              - Method=POST
-           filters:
-             - StripPrefix=1
          # Token validation endpoint - Public
          - id: auth-validation-route
            uri: http://auth-service:4005
            predicates:
              - Path=/auth/validate
              - Method=GET
-           filters:
-             - StripPrefix=1
          # ============================================
          # USER MANAGEMENT ROUTES (Protected - JWT Required)
          # ============================================

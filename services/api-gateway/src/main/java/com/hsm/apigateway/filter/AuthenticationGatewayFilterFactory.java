@@ -31,7 +31,7 @@ public class AuthenticationGatewayFilterFactory extends AbstractGatewayFilterFac
             }
 
             return webClient.get()
-                    .uri("/validate")
+                    .uri("/auth/validate")
                     .header(HttpHeaders.AUTHORIZATION, token)
                     .retrieve()
                     .toBodilessEntity()

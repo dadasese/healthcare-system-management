@@ -37,8 +37,8 @@ public class UserController {
     }
 
     @Operation(summary = "Update user information")
-    @PutMapping("/{userId}/password")
-    public ResponseEntity<UserResponseDTO> updateUSer(
+    @PutMapping("/{userId}")
+    public ResponseEntity<UserResponseDTO> updateUser(
            @PathVariable Long userId,
            @Valid @RequestBody UpdateUserRequestDTO updateUserRequestDTO) {
         try {
@@ -50,7 +50,7 @@ public class UserController {
     }
 
     @Operation(summary = "Update user password")
-    @PutMapping("/{userId}")
+    @PutMapping("/{userId}/password")
     public ResponseEntity<UserResponseDTO> updatePassword(
             @PathVariable Long userId, @Valid
             @RequestBody UpdatePasswordRequestDTO updatePasswordRequestDTO) {
