@@ -1,13 +1,12 @@
 package com.hsm.patientservice.grpc;
 
-import com.hsm.authservice.protodefinitions.billing.*;
 import com.hsm.protodefinitions.billing.*;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
-import com.hsm.authservice.protodefinitions.billing.BillingServiceGrpc.BillingServiceBlockingStub;
+import com.hsm.protodefinitions.billing.BillingServiceGrpc.BillingServiceBlockingStub;
 
 @Service
 @Slf4j
