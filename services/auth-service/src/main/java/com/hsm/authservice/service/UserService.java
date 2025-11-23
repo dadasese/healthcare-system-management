@@ -114,12 +114,12 @@ public class UserService {
                 () -> new IllegalArgumentException("User not found")
         );
 
-        if ("DISABLED".equals(user.getStatus())){
+        if ("INACTIVE".equals(user.getStatus())){
             throw new IllegalArgumentException("User is already disabled");
         }
 
         log.info("Successfully user disabled with id: {}", userId);
-        user.setStatus("DISABLED");
+        user.setStatus("INACTIVE");
         return userRepository.save(user);
     }
 
@@ -132,12 +132,12 @@ public class UserService {
         User user = userRepository.findById(userId).orElseThrow(() ->
                 new IllegalArgumentException("User not found"));
 
-        if ("ENABLED".equals(user.getStatus())){
+        if ("ACTIVE".equals(user.getStatus())){
             throw new IllegalArgumentException("User is already enabled");
         }
 
         log.info("Successfully user enabled with id: {}", userId);
-        user.setStatus("ENABLED");
+        user.setStatus("ACTIVE");
         return userRepository.save(user);
     }
 
