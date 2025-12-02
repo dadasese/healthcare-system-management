@@ -1,4 +1,4 @@
-# 🏥 Patient Microservice Architecture Project
+# Patient Microservice Architecture Project
 
 A comprehensive project replicating a modern microservice architecture built with **Spring Boot** and leveraging several key technologies for inter-service communication, asynchronous processing, service discovery, and security.
 
